@@ -1,0 +1,10 @@
+networks:
+    publish:
+        external: true
+        name: ${RABBITMQ_PUBLISH_NETWORK_NAME:-publish}
+
+services:
+  rabbitmq:
+    restart: always
+    networks:
+      - publish
