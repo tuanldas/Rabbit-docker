@@ -1,7 +1,8 @@
 volumes:
   rabbitmq_data:
-    external:
-        name: ${RABBITMQ_VOLUME_NAME:-rabbitmq_data}
+    external: true
+    name: ${RABBITMQ_VOLUME_NAME:-rabbitmq_data}
+
 services:
   rabbitmq:
     image: rabbitmq:4.0-management
